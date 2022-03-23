@@ -1,0 +1,10 @@
+#基础镜像
+FROM nginx
+#维护人信息
+MAINTAINER 211906123
+
+#添加文件（自定义工作目录：/web/html/）
+COPY default.conf /etc/nginx/conf.d/
+COPY index.html /web/html/
+#暴露端口
+EXPOSE 8989
